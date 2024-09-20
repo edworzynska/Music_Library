@@ -6,6 +6,7 @@ public class MusicLibrary {
     private ArrayList<Song> songs;
 
     public MusicLibrary(){
+
         songs = new ArrayList<Song>();
     }
 
@@ -21,10 +22,10 @@ public class MusicLibrary {
     public void playRandomSong(){
         int size = songs.size();
         if (size == 0){
-            System.out.println("brak utworow w bibliotece");
+            System.out.println("The library is empty");
         }
         Random rand = new Random();
         int index = rand.nextInt(size);
-        System.out.println("aktualnie gramy: " +"\""+  songs.get(index).getName() + "\" - " + songs.get(index).getArtist());
+        System.out.println("Now playing: " +"\""+  songs.get(index).getName() + "\" - " + songs.get(index).getArtist());
         }
     }
